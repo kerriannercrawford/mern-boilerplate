@@ -7,15 +7,15 @@
 
 ## Directories set up
 
-- **main (main file path for project)**
+- **mern-boilerplate (main file path for project)**
   - **client (for react)**
     - index.js
-    - components (for react components)
-      - App.jsx (main react component)
+    - components
+      - App.jsx
   - **controller (for route controllers)**
     - mainController.js
   - **models (for mongo)**
-    - mainModel.js (for schema)
+    - mainModel.js
   - **public (for static files)**
     - index.html
     - style.css
@@ -26,9 +26,11 @@
   - **server.js (for express backend)**
   - **webpack.config.js (for webpack configuration)**
 
-# Package.json
+## Package.json
 
 Dependencies:<br>
+If forked, running one `npm install` should install all dependencies in package.json.
+<br>
 `npm install express` <br>
 `npm install nodemon` <br>
 `npm install @babel/core @babel/preset-react babel-loader react react-dom webpack webpack-cli`<br>
@@ -38,3 +40,7 @@ Scripts:
 
 - `"start: nodemon server.js"` (to hot reload server)
 - `"webpack": "./node_modules/.bin/webpack -w"` (to hot rebundle webpack)
+
+## Credit
+
+Inspo from https://github.com/kriscfoster/Express-React-BP.
