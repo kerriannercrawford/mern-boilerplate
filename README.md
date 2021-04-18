@@ -31,6 +31,10 @@
 Dependencies:<br>
 If forked, running one `npm install` should install all dependencies in package.json.
 <br>
+
+<hr>
+<br>
+
 `npm install express` <br>
 `npm install nodemon` <br>
 `npm install @babel/core @babel/preset-react babel-loader react react-dom webpack webpack-cli`<br>
