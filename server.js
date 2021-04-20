@@ -10,6 +10,14 @@ const app = express();
 
 const mainRouter = require('./routes/mainRouter.js');
 
+app.use(express.static(__dirname + '/public'));
+
+app.get('/home', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/public/index.html'));
+});
+
+app.use('/api', mainRouter);
+
 mongoose
   .connect(CONNECTION_URL, {
     useNewUrlParser: true,
@@ -19,11 +27,3 @@ mongoose
   .catch((err) => console.log(err.message));
 
 mongoose.set('useFindAndModify', false);
-
-app.use(express.static(__dirname + '/public'));
-
-app.get('/home', (req, res) => {
-  res.sendFile(path.resolve(__dirname + '/public/index.html'));
-});
-
-app.use('/api', mainRouter);
