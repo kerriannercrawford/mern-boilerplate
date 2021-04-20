@@ -21,7 +21,6 @@ mongoose
 mongoose.set('useFindAndModify', false);
 
 app.use(express.static(__dirname + '/public'));
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 app.get('/home', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/public/index.html'));
